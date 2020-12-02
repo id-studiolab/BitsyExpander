@@ -2425,6 +2425,42 @@ package type OT</description>
 <smd name="VHI_2" x="-8.89" y="-11.811" dx="1.27" dy="2.032" layer="1" rot="R180"/>
 <text x="-17.78" y="19.685" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 </package>
+<package name="HW4-PTH-2.0">
+<wire x1="-5" y1="1" x2="-5" y2="-1" width="0.127" layer="21"/>
+<wire x1="5" y1="1.5" x2="5" y2="-1.5" width="0.254" layer="21"/>
+<wire x1="-5" y1="2.2" x2="-5" y2="-2.2" width="0.254" layer="21"/>
+<wire x1="-5" y1="-2.2" x2="-3.2" y2="-2.2" width="0.254" layer="21"/>
+<wire x1="5" y1="-2.2" x2="5" y2="2.2" width="0.254" layer="21"/>
+<wire x1="-5" y1="2.2" x2="5" y2="2.2" width="0.254" layer="21"/>
+<wire x1="-5" y1="-2.2" x2="-5" y2="-2.8" width="0.254" layer="21"/>
+<wire x1="-5" y1="-2.8" x2="-3.2" y2="-2.8" width="0.254" layer="21"/>
+<wire x1="-3.2" y1="-2.8" x2="-3.2" y2="-2.2" width="0.254" layer="21"/>
+<wire x1="-3.2" y1="-2.2" x2="3.2" y2="-2.2" width="0.254" layer="21"/>
+<wire x1="3.2" y1="-2.2" x2="5" y2="-2.2" width="0.254" layer="21"/>
+<wire x1="3.2" y1="-2.2" x2="3.2" y2="-2.8" width="0.254" layer="21"/>
+<wire x1="3.2" y1="-2.8" x2="5" y2="-2.8" width="0.254" layer="21"/>
+<wire x1="5" y1="-2.8" x2="5" y2="-2.2" width="0.254" layer="21"/>
+<wire x1="-5" y1="2.2" x2="5" y2="2.2" width="0.254" layer="39"/>
+<wire x1="5" y1="2.2" x2="5" y2="-2.8" width="0.254" layer="39"/>
+<wire x1="-5" y1="-2.8" x2="-5" y2="2.2" width="0.254" layer="39"/>
+<wire x1="-4.953" y1="-2.794" x2="-3.175" y2="-2.794" width="0.254" layer="39"/>
+<wire x1="-3.175" y1="-2.794" x2="-3.175" y2="-2.159" width="0.254" layer="39"/>
+<wire x1="-3.175" y1="-2.159" x2="-1.778" y2="-2.159" width="0.254" layer="39"/>
+<wire x1="-1.778" y1="-2.159" x2="-1.778" y2="-4.191" width="0.254" layer="39"/>
+<wire x1="-1.778" y1="-4.191" x2="1.778" y2="-4.191" width="0.254" layer="39"/>
+<wire x1="1.778" y1="-4.191" x2="1.778" y2="-2.159" width="0.254" layer="39"/>
+<wire x1="1.778" y1="-2.159" x2="3.175" y2="-2.159" width="0.254" layer="39"/>
+<wire x1="3.175" y1="-2.159" x2="3.175" y2="-2.794" width="0.254" layer="39"/>
+<wire x1="3.175" y1="-2.794" x2="4.953" y2="-2.794" width="0.254" layer="39"/>
+<pad name="1" x="-3" y="0" drill="0.8" diameter="1.27" shape="square"/>
+<pad name="2" x="-1" y="0" drill="0.8" diameter="1.27"/>
+<pad name="3" x="1" y="0" drill="0.8" diameter="1.27"/>
+<pad name="4" x="3" y="0" drill="0.8" diameter="1.27"/>
+<text x="-2.54" y="2.54" size="0.889" layer="25" font="vector" ratio="11">&gt;NAME</text>
+<text x="-2.54" y="-1.905" size="0.889" layer="27" font="vector" ratio="11">&gt;VALUE</text>
+<smd name="5" x="1.27" y="0" dx="0" dy="0" layer="1"/>
+<smd name="6" x="0.635" y="0" dx="0" dy="0" layer="1"/>
+</package>
 <package name="HW4-SMD-2.0">
 <wire x1="-6.1" y1="1.073" x2="-3.8" y2="1.073" width="0.254" layer="21"/>
 <wire x1="-6.1" y1="5.273" x2="6.1" y2="5.273" width="0.254" layer="21"/>
@@ -5640,7 +5676,7 @@ Source: VISHAY wscwsn.pdf</description>
 <pin name="12_NC" x="0" y="0" length="middle" rot="R270"/>
 <pin name="13_NC" x="-2.54" y="0" length="middle" rot="R270"/>
 </symbol>
-<symbol name="GROVE-CONNECTOR-SMD">
+<symbol name="GROVE-CONNECTOR">
 <wire x1="-2.54" y1="5.08" x2="2.54" y2="5.08" width="0.254" layer="94"/>
 <wire x1="2.54" y1="5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
@@ -7122,10 +7158,10 @@ Standard 2-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </device>
 </devices>
 </deviceset>
-<deviceset name="GROVE-CONNECTOR-SMD(4+2P-2.0)" prefix="J" uservalue="yes">
+<deviceset name="GROVE-CONNECTOR-4PIN" prefix="J" uservalue="yes">
 <description>320110030</description>
 <gates>
-<gate name="G$1" symbol="GROVE-CONNECTOR-SMD" x="0" y="0"/>
+<gate name="G$1" symbol="GROVE-CONNECTOR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="HW4-SMD-2.0">
@@ -7141,6 +7177,19 @@ Standard 2-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <technology name="">
 <attribute name="VALUE" value="H4P-SMD-2.0" constant="no"/>
 </technology>
+</technologies>
+</device>
+<device name="HW4-PTH-2.0" package="HW4-PTH-2.0">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="SS1" pad="5"/>
+<connect gate="G$1" pin="SS2" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -8981,7 +9030,7 @@ DIN A4, landscape with extra doc field</description>
 </class>
 </classes>
 <parts>
-<part name="J1" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
+<part name="J1" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
 <part name="U1" library="ItsyBitsy_Expander_v1.0" deviceset="ESP-WROOM-32" device=""/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
 <part name="CN2" library="ItsyBitsy_Expander_v1.0" deviceset="M02" device="-JST-2MM-SMT" value="JSTPH"/>
@@ -9005,17 +9054,17 @@ DIN A4, landscape with extra doc field</description>
 <part name="U$17" library="ItsyBitsy_Expander_v1.0" deviceset="GND" device=""/>
 <part name="U$18" library="ItsyBitsy_Expander_v1.0" deviceset="GND" device=""/>
 <part name="U$19" library="ItsyBitsy_Expander_v1.0" deviceset="GND" device=""/>
-<part name="J2" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
-<part name="J3" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
-<part name="J4" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
-<part name="J5" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
-<part name="J6" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
-<part name="J7" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
-<part name="J8" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
-<part name="J9" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
-<part name="J10" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
-<part name="J11" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
-<part name="J12" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-SMD(4+2P-2.0)" device="" value="H4P-SMD-2.0"/>
+<part name="J2" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
+<part name="J3" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
+<part name="J4" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
+<part name="J5" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
+<part name="J6" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
+<part name="J7" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
+<part name="J8" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
+<part name="J9" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
+<part name="J10" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
+<part name="J11" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
+<part name="J12" library="ItsyBitsy_Expander_v1.0" deviceset="GROVE-CONNECTOR-4PIN" device="" value="H4P-SMD-2.0"/>
 <part name="U$31" library="ItsyBitsy_Expander_v1.0" deviceset="GND" device=""/>
 <part name="+3V9" library="ItsyBitsy_Expander_v1.0" deviceset="+3V3" device=""/>
 <part name="U$33" library="ItsyBitsy_Expander_v1.0" deviceset="GND" device=""/>
@@ -9121,7 +9170,6 @@ DIN A4, landscape with extra doc field</description>
 <instances>
 <instance part="J1" gate="G$1" x="99.06" y="63.5" smashed="yes" rot="R270">
 <attribute name="NAME" x="102.87" y="59.69" size="1.27" layer="95" ratio="10" align="center"/>
-<attribute name="VALUE" x="96.52" y="59.69" size="1.27" layer="96" ratio="10" align="center"/>
 </instance>
 <instance part="U1" gate="G$1" x="-82.55" y="59.69" smashed="yes">
 <attribute name="NAME" x="-95.25" y="77.724" size="1.778" layer="95"/>
@@ -9203,11 +9251,9 @@ DIN A4, landscape with extra doc field</description>
 </instance>
 <instance part="J2" gate="G$1" x="99.06" y="43.18" smashed="yes" rot="R270">
 <attribute name="NAME" x="102.87" y="39.37" size="1.27" layer="95" ratio="10" align="center"/>
-<attribute name="VALUE" x="96.52" y="39.37" size="1.27" layer="96" ratio="10" align="center"/>
 </instance>
 <instance part="J3" gate="G$1" x="99.06" y="22.86" smashed="yes" rot="R270">
 <attribute name="NAME" x="102.87" y="19.05" size="1.27" layer="95" ratio="10" align="center"/>
-<attribute name="VALUE" x="96.52" y="19.05" size="1.27" layer="96" ratio="10" align="center"/>
 </instance>
 <instance part="J4" gate="G$1" x="99.06" y="2.54" smashed="yes" rot="R270">
 <attribute name="NAME" x="102.87" y="-1.27" size="1.27" layer="95" ratio="10" align="center"/>
@@ -9977,51 +10023,51 @@ DIN A4, landscape with extra doc field</description>
 </net>
 <net name="SDA" class="0">
 <segment>
-<pinref part="J4" gate="G$1" pin="1"/>
-<wire x1="102.87" y1="7.62" x2="106.68" y2="7.62" width="0.1524" layer="91"/>
-<label x="102.87" y="7.62" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J5" gate="G$1" pin="1"/>
-<wire x1="102.87" y1="-12.7" x2="106.68" y2="-12.7" width="0.1524" layer="91"/>
-<label x="102.87" y="-12.7" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J6" gate="G$1" pin="1"/>
-<wire x1="102.87" y1="-33.02" x2="106.68" y2="-33.02" width="0.1524" layer="91"/>
-<label x="102.87" y="-33.02" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="-44.45" y1="-24.13" x2="-63.5" y2="-24.13" width="0.1524" layer="91"/>
 <label x="-54.61" y="-24.13" size="1.524" layer="95"/>
 <pinref part="ITSYBITSY_M4_EXPRESS" gate="G$1" pin="SDA"/>
 <pinref part="R7" gate="G$1" pin="2"/>
 </segment>
-</net>
-<net name="SCL" class="0">
-<segment>
-<pinref part="J4" gate="G$1" pin="2"/>
-<wire x1="100.33" y1="7.62" x2="100.33" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="100.33" y1="10.16" x2="106.68" y2="10.16" width="0.1524" layer="91"/>
-<label x="102.87" y="10.16" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="J6" gate="G$1" pin="2"/>
 <wire x1="100.33" y1="-33.02" x2="100.33" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="100.33" y1="-30.48" x2="106.68" y2="-30.48" width="0.1524" layer="91"/>
-<label x="102.87" y="-30.48" size="1.778" layer="95"/>
+<label x="104.14" y="-30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J5" gate="G$1" pin="2"/>
 <wire x1="100.33" y1="-12.7" x2="100.33" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="100.33" y1="-10.16" x2="106.68" y2="-10.16" width="0.1524" layer="91"/>
-<label x="102.87" y="-10.16" size="1.778" layer="95"/>
+<label x="104.14" y="-10.16" size="1.778" layer="95"/>
+<pinref part="J5" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<wire x1="100.33" y1="7.62" x2="100.33" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="100.33" y1="10.16" x2="106.68" y2="10.16" width="0.1524" layer="91"/>
+<label x="104.14" y="10.16" size="1.778" layer="95"/>
+<pinref part="J4" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="SCL" class="0">
 <segment>
 <wire x1="-44.45" y1="-21.59" x2="-63.5" y2="-21.59" width="0.1524" layer="91"/>
 <label x="-54.61" y="-21.59" size="1.524" layer="95"/>
 <pinref part="ITSYBITSY_M4_EXPRESS" gate="G$1" pin="SCL"/>
 <pinref part="R6" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="J6" gate="G$1" pin="1"/>
+<wire x1="102.87" y1="-33.02" x2="106.68" y2="-33.02" width="0.1524" layer="91"/>
+<label x="104.14" y="-33.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="102.87" y1="-12.7" x2="106.68" y2="-12.7" width="0.1524" layer="91"/>
+<label x="104.14" y="-12.7" size="1.778" layer="95"/>
+<pinref part="J5" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<wire x1="102.87" y1="7.62" x2="106.68" y2="7.62" width="0.1524" layer="91"/>
+<label x="104.14" y="7.62" size="1.778" layer="95"/>
+<pinref part="J4" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="D3" class="0">
