@@ -6,7 +6,7 @@ Grove Breakout and WiFi board for Adafruit's [ItsyBitsy M4 Express](https://www.
 This is the sibling of the [Nano Expander](https://github.com/id-studiolab/NanoExpander), a Grove Breakout board for [Arduino Nano 33 IoT](https://store.arduino.cc/products/arduino-nano-33-iot).
 
 
-<img src="https://github.com/id-studiolab/BitsyExpander/blob/main/ItsyBitsy%20Expander%20v1.1/Assets/Preview_Top.png" width="400px">   <img src="https://github.com/id-studiolab/BitsyExpander/blob/main/ItsyBitsy%20Expander%20v1.1/Assets/Preview_Back.png" width="400px">
+<img src="https://github.com/id-studiolab/BitsyExpander/blob/main/ItsyBitsy%20Expander%20v1.1/Assets/Preview_Top_ENIG.png" width="400px">   <img src="https://github.com/id-studiolab/BitsyExpander/blob/main/ItsyBitsy%20Expander%20v1.1/Assets/Preview_Back_ENIG.png" width="400px">
 
 
 This work is licensed under a
