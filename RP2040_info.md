@@ -1,32 +1,19 @@
-# BitsyExpander RP2040
-Grove Breakout and WiFi board for Adafruit's [ItsyBitsy RP2040](https://www.adafruit.com/product/4888).
+# Bitsy Expander RP2040 Pinout Diagrams
+## Standard Usage
+Unlike the ItsyBitsy M4, which includes two more analog pins (and two DAC's), the RP2040 replaces these with two additional digital pins. The RP2040 affords greater flexibility in GPIO pin usage, but extra planning and research may be needed to fully leverage this advantage.
 
-This page refers to an adaptation of the original BitsyExpander for ItsyBitsy M4, intended for the lower cost ItsyBitsy RP2040.
-Both are electrically identical, the version described here features an amended silkscreen targeting the RP2040.
-
-## Pin information
-Contrary to the ItsyBitsy M4, it has less analog input and no true analog output pins. While RP2040 has more limited analog capabilities, it allows for flexible configuration and use of its GPIO pins. This can be advantageous, but may require more careful planning and research.
-
-**For detailed information on the ItsyBitsy RP2040's pinout, see Adafruit's documentation:**  
+**For detailed information on the ItsyBitsy RP2040's pinout, refer to Adafruit's documentation:**  
 
 [Adafruit ItsyBitsy RP2040](https://learn.adafruit.com/adafruit-itsybitsy-rp2040)
 
 
-## Arduino support
-[CircuitPython](https://circuitpython.org/board/adafruit_itsybitsy_rp2040/) is recommended for the ItsyBitsy RP2040. 
-However, there is community support for using it with Arduino.
+## Arduino Support
+The pin markings on the BitsyExpander RP2040 as well as on the ItsyBitsy RP2040 itself apply solely for use with [CircuitPython](https://circuitpython.org/board/adafruit_itsybitsy_rp2040/). To program the board using [Arduino](https://learn.adafruit.com/adafruit-itsybitsy-rp2040/arduino-ide-setup), the following pin map applies:
 
 **Relevant links:**  
+[Arduino IDE set-up for ItsyBitsy RP2040](https://learn.adafruit.com/adafruit-itsybitsy-rp2040/arduino-ide-setup)  
+[Earlephilhower's Pi Pico Arduino Core](https://github.com/earlephilhower/arduino-pico/#arduino-pico)  
 
-[Earlephilhower's Arduino Pico Core](https://github.com/earlephilhower/arduino-pico/#arduino-pico)  
-[Program RP2040 in Arduino (Adafruit)](https://learn.adafruit.com/rp2040-arduino-with-the-earlephilhower-core)
+## Usage with M4 Express
 
-
-This work is licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by].
-
-[![CC BY 4.0][cc-by-image]][cc-by]
-
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+Should you wish to use a Bitsy Expander RP2040 with an ItsyBitsy M4 Express development board, refer to this pinout diagram:
