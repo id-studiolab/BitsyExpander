@@ -5,41 +5,6 @@ An expansion board adding support for the Grove solderless connector system, a W
 
 Compatible with all ItsyBitsy boards, the Bitsy Expander is available in two distinct flavors. The silkscreens on each flavor are specifically tailored to either the [ItsyBitsy M4 Express](https://www.adafruit.com/product/3800) or the [ItsyBitsy RP2040](https://www.adafruit.com/product/4888).
 
-## General Information
-
-### WiFi and BLE
-
-The Bitsy Expander uses an ESP32 WROOM module to provide WiFi functionality to the microcontroller using [Adafruit's fork](https://github.com/adafruit/nina-fw) of the Arduino NINA-W102 firmware. In CircuitPython, this library also allows for the use of Bluetooth Low Energy (BLE).
-
-To use the module with Circuitpython, use the [esp32spi](https://docs.circuitpython.org/projects/esp32spi/en/latest/) library. For Arduino, [Adafruit's forked WiFiNINA](https://github.com/adafruit/WiFiNINA/) library is required.
-
-The ESP32 module is connected as follows:
-
-| ESP32 Pin        | ItsyBitsy Pin |
-| ---------------- | ------------- |
-| Chip Select (CS) | D9            |
-| Busy (BSY)       | D11           |
-| Reset (RST)      | D12           |
-| SPI Clock (SCK)  | SCK           |
-| SPI MISO         | MISO          |
-| SPI MOSI         | MOSI          |
-
-### Solder Jumpers
-
-The underside of the Bitsy Expander features a number of solder jumpers:
-
-#### WIFI PIN:
-
-These pins are used to connect the ItsyBitsy board to the ESP32 module on the Expander. If WiFi functionality is not needed but additional digital pins are required, these jumpers can be used to disable the WiFi module and make additional pins available in the double-row header on the upper side of the board. The traces between the middle and left pads must be severed before soldering a jumper in place between the middle and the right pads to do so.
-
-#### ESP32 CONFIG:
-
-These solder jumpers are normally open. If the ESP32 module requires a firmware update, these jumpers may be used to enable the ItsyBitsy to serve as a programming interface for the ESP32 module. Refer to [Adafruit's excellent tutorial](https://learn.adafruit.com/upgrading-esp32-firmware) on flashing firmware onto the ESP32.
-
-#### BATTERY CHARGING:
-
-The default battery charging current is 100mA. A faster, 500mA charging mode is available for batteries that support it. It can be enabled by closing the solder jumper.
-
 ## Bitsy Expander M4
 
 ### Preview
@@ -80,23 +45,62 @@ The default battery charging current is 100mA. A faster, 500mA charging mode is 
 
 > NOTE: In shingled pin headers, each header's second pin is shared with the first pin in the header above it. Therefore, using one disables the other. For instance, using pins D3 and D4 in the  D3-labeled header disallows the use of D4 in the D4-labeled header.
 
+## General Information
+
+### WiFi and BLE
+
+The Bitsy Expander uses an ESP32 WROOM module to provide WiFi functionality to the microcontroller using [Adafruit's fork](https://github.com/adafruit/nina-fw) of the Arduino NINA-W102 firmware. In CircuitPython, this library also allows for the use of Bluetooth Low Energy (BLE).
+
+To use the module with Circuitpython, use the [esp32spi](https://docs.circuitpython.org/projects/esp32spi/en/latest/) library. For Arduino, [Adafruit's forked WiFiNINA](https://github.com/adafruit/WiFiNINA/) library is required.
+
+The ESP32 module is connected as follows:
+
+| ESP32 Pin        | ItsyBitsy Pin |
+| ---------------- | ------------- |
+| Chip Select (CS) | D9            |
+| Busy (BSY)       | D11           |
+| Reset (RST)      | D12           |
+| SPI Clock (SCK)  | SCK           |
+| SPI MISO         | MISO          |
+| SPI MOSI         | MOSI          |
+
+### Solder Jumpers
+
+The underside of the Bitsy Expander features a number of solder jumpers:
+
+#### WIFI PIN:
+
+These pins are used to connect the ItsyBitsy board to the ESP32 module on the Expander. If WiFi functionality is not needed but additional digital pins are required, these jumpers can be used to disable the WiFi module and make additional pins available in the double-row header on the upper side of the board. The traces between the middle and left pads must be severed before soldering a jumper in place between the middle and the right pads to do so.
+
+#### ESP32 CONFIG:
+
+These solder jumpers are normally open. If the ESP32 module requires a firmware update, these jumpers may be used to enable the ItsyBitsy to serve as a programming interface for the ESP32 module. Refer to [Adafruit's excellent tutorial](https://learn.adafruit.com/upgrading-esp32-firmware) on flashing firmware onto the ESP32.
+
+#### BATTERY CHARGING:
+
+The default battery charging current is 100mA. A faster, 500mA charging mode is available for batteries that support it. It can be enabled by closing the solder jumper.
+
 ## FAQ
 
 #### How do I recognize which Bitsy Expander I have?
 
-There are multiple ways to identify which Bitsy Expander flavor you own. The easiest is looking for the label on the back of the board. It will either explicitly state the flavor (RP2040 or M4) or, on older boards, have an empty label at the top (in which case it is an M4 board). Thes older M4 boards also lack the JST SH 4-pin connector at the top. 
+<img src="assets/recognize_expander.jpg" width="400px">
 
-#### Will any ItsyBitsy-type microcontroller work with the Bitsy Expander?
+The easiest way to identify which Bitsy Expander flavor you own is checking the label on the back of the board. **RP2040** or **M4** stated on the label indicates the flavor of your Expander. Older M4 Expanders have an **empty label** (and are also recognizable by the lack of an I²C header at the top). 
 
-In principle, yes. The silkscreen on either flavor is specifically designed for either the [ItsyBitsy M4 Express](https://www.adafruit.com/product/3800) or the [ItsyBitsy RP2040](https://www.adafruit.com/product/4888), respectively. Pinouts differ only slightly, however. The expander has also been used successfully with the [ItsyBitsy M0 Express](https://www.adafruit.com/product/3727) in the past. This repository includes a number of pinout diagrams for different use-cases:
+#### How do I recognize which ItsyBitsy Development Board I am using?
 
-|      |      |      |
-| ---- | ---- | ---- |
-|      |      |      |
-|      |      |      |
-|      |      |      |
+<p align="center" style="display: flex; justify-content: center;">
+  <img src="assets/recognize_IB_M4.jpg" width="250px" alt="ItsyBitsy M4 Express" style="margin-right: 25px;">
+  <img src="assets/recognize_IB_RP2040.jpg" width="250px" alt="ItsyBitsy RP2040" style="margin-left: 25px;">
+</p>
 
+The **ItsyBitsy M4 Express** features **one (RESET) button**. (So do most other ItsyBitsy Development boards, so always verify with the silkscreen.)
+The **ItsyBitsy RP2040** features **two (BOOT, RESET) buttons**.
 
+#### Will any ItsyBitsy-type microcontroller work with any Bitsy Expander?
+
+In principle, yes. The silkscreen on either flavor is specifically designed for either the [ItsyBitsy M4 Express](https://www.adafruit.com/product/3800) or the [ItsyBitsy RP2040](https://www.adafruit.com/product/4888), respectively. Pinouts differ only slightly between ItsyBitsy Development boards, however. The M4 Expander, for instance, has also been used successfully with the [ItsyBitsy M0 Express](https://www.adafruit.com/product/3727) in the past. This repository includes a number of pinout diagrams for different use-cases.
 
 ## Version History
 

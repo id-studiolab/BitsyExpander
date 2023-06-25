@@ -6,6 +6,8 @@ Unlike the ItsyBitsy M4, which includes two more analog pins (and two DAC's), th
 
 [Adafruit ItsyBitsy RP2040](https://learn.adafruit.com/adafruit-itsybitsy-rp2040)
 
+<img src="resources/RP2040_Standard.pdf">
+
 
 ## Arduino Support
 The pin markings on the BitsyExpander RP2040 as well as on the ItsyBitsy RP2040 itself apply solely for use with [CircuitPython](https://circuitpython.org/board/adafruit_itsybitsy_rp2040/). To program the board using [Arduino](https://learn.adafruit.com/adafruit-itsybitsy-rp2040/arduino-ide-setup), the following pin map applies:
@@ -14,6 +16,10 @@ The pin markings on the BitsyExpander RP2040 as well as on the ItsyBitsy RP2040 
 [Arduino IDE set-up for ItsyBitsy RP2040](https://learn.adafruit.com/adafruit-itsybitsy-rp2040/arduino-ide-setup)  
 [Earlephilhower's Pi Pico Arduino Core](https://github.com/earlephilhower/arduino-pico/#arduino-pico)  
 
-## Usage with M4 Express
+<img src="resources/RP2040_Arduino.pdf">
+
+## Alternative Use with M4 Express
 
 Should you wish to use a Bitsy Expander RP2040 with an ItsyBitsy M4 Express development board, refer to this pinout diagram:
+
+<img src="resources/RP2040_Alt_M4.pdf">
