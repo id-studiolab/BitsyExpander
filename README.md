@@ -5,6 +5,14 @@ An expansion board adding support for the Grove solderless connector system, a W
 
 Compatible with all ItsyBitsy boards, the Bitsy Expander is available in two distinct flavors. The silkscreens on each flavor are specifically tailored to either the [ItsyBitsy M4 Express](https://www.adafruit.com/product/3800) or the [ItsyBitsy RP2040](https://www.adafruit.com/product/4888).
 
+**Jump ahead:**
+
+* [Bitsy Expander M4](#bitsy-expander-m4)
+* [Bitsy Expander RP2040](#bitsy-expander-rp2040)
+* [General Information](#general-information)
+* [FAQ](#faq)
+* [Version History](#version-history)
+
 ## Bitsy Expander M4
 
 ### Preview
@@ -29,6 +37,10 @@ Compatible with all ItsyBitsy boards, the Bitsy Expander is available in two dis
 
 > NOTE: In shingled pin headers, each header's second pin is shared with the first pin in the header above it. Therefore, using one disables the other. For instance, using pins D3 and D4 in the  D3-labeled header disallows the use of D4 in the D4-labeled header.
 
+### Pinout Diagrams
+
+Additional resources and pinout diagrams are available **[here](M4_info)**.
+
 ## Bitsy Expander RP2040
 
 ### Preview
@@ -51,6 +63,10 @@ Compatible with all ItsyBitsy boards, the Bitsy Expander is available in two dis
 * 1 Logic-shifted output (allows driving components requiring 5V logic while powered via USB)
 
 > NOTE: In shingled pin headers, each header's second pin is shared with the first pin in the header above it. Therefore, using one disables the other. For instance, using pins D3 and D4 in the  D3-labeled header disallows the use of D4 in the D4-labeled header.
+
+### Pinout Diagrams
+
+Additional resources and pinout diagrams are available **[here](RP2040_info)**.
 
 ## General Information
 
