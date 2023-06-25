@@ -10,7 +10,7 @@ This page provides an overview of the pins made available via the Grove headers 
 **Jump ahead to pinout diagram:**
 
 * [Pinout for Standard Usage](#standard-usage)
-* [Original Bitsy Expander (Version 1.1)](#original-bitsy-expander-version-1-1)
+* [Original Bitsy Expander (Version 1.1)](#original-bitsy-expander-version-11)
 * [Alternative Use with ItsyBitsy RP2040](#alternative-use-with-itsybitsy-rp2040)
 
 ## Standard Usage
