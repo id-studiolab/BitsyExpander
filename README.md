@@ -9,7 +9,11 @@ Compatible with all ItsyBitsy boards, the Bitsy Expander is available in two dis
 
 ### Preview
 
-<img src="assets/M4_V3.0_Front.png" width="400px">   <img src="assets/M4_V3.0_Back.png" width="400px">
+<p align="center">
+  <img src="assets/M4_V3.0_Front.png" width="400px" alt="Bitsy Expander M4 Front">
+  <img src="assets/M4_V3.0_Back.png" width="400px" alt="Bitsy Expander M4 Back">
+</p>
+
 
 ### Features
 
@@ -29,7 +33,10 @@ Compatible with all ItsyBitsy boards, the Bitsy Expander is available in two dis
 
 ### Preview
 
-<img src="assets/RP2040_V2.1_Front.png" width="400px">   <img src="assets/RP2040_V2.1_Back.png" width="400px">
+<p align="center">
+  <img src="assets/RP2040_V2.1_Front.png" width="400px" alt="Bitsy Expander RP2040 Front">
+  <img src="assets/RP2040_V2.1_Back.png" width="400px" alt="Bitsy Expander RP2040 Back">
+</p>
 
 ### Features
 
@@ -84,15 +91,17 @@ The default battery charging current is 100mA. A faster, 500mA charging mode is 
 
 #### How do I recognize which Bitsy Expander I have?
 
-<img src="assets/recognize_expander.jpg" width="400px">
+<p align="center">
+  <img src="assets/recognize_expander.jpg" width="400px" alt="Identify Expander Type">
+</p>
 
 The easiest way to identify which Bitsy Expander flavor you own is checking the label on the back of the board. **RP2040** or **M4** stated on the label indicates the flavor of your Expander. Older M4 Expanders have an **empty label** (and are also recognizable by the lack of an I²C header at the top). 
 
 #### How do I recognize which ItsyBitsy Development Board I am using?
 
 <p align="center" style="display: flex; justify-content: center;">
-  <img src="assets/recognize_IB_M4.jpg" width="250px" alt="ItsyBitsy M4 Express" style="margin-right: 25px;">
-  <img src="assets/recognize_IB_RP2040.jpg" width="250px" alt="ItsyBitsy RP2040" style="margin-left: 25px;">
+  <img src="assets/recognize_IB_M4.jpg" width="250px" alt="Identify ItsyBitsy M4 Express" style="margin-right: 25px;">
+  <img src="assets/recognize_IB_RP2040.jpg" width="250px" alt="Identify ItsyBitsy RP2040" style="margin-left: 25px;">
 </p>
 
 The **ItsyBitsy M4 Express** features **one (RESET) button**. (So do most other ItsyBitsy Development boards, so always verify with the silkscreen.)
