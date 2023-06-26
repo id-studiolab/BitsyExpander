@@ -1,13 +1,143 @@
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
-# BitsyExpander
-Grove Breakout and WiFi board for Adafruit's [ItsyBitsy M4 Express](https://www.adafruit.com/product/3800).
+# Bitsy Expander
+An expansion board adding support for the Grove solderless connector system, a WiFi radio, and LiPo battery charging circuitry to Adafruit ItsyBitsy Development Boards.
 
-This is the sibling of the [Nano Expander](https://github.com/id-studiolab/NanoExpander), a Grove Breakout board for [Arduino Nano 33 IoT](https://store.arduino.cc/products/arduino-nano-33-iot).
+Compatible with all ItsyBitsy boards, the Bitsy Expander is available in two distinct flavors. The silkscreens on each flavor are specifically tailored to either the [ItsyBitsy M4 Express](https://www.adafruit.com/product/3800) or the [ItsyBitsy RP2040](https://www.adafruit.com/product/4888).
+
+**Jump ahead:**
+
+* [Bitsy Expander M4](#bitsy-expander-m4)
+* [Bitsy Expander RP2040](#bitsy-expander-rp2040)
+* [General Information](#general-information)
+* [FAQ](#faq)
+* [Version History](#version-history)
+
+## Bitsy Expander M4
+
+### Preview
+
+<p align="center">
+  <img src="assets/M4_V3.0_Front.png" width="400px" alt="Bitsy Expander M4 Front">
+  <img src="assets/M4_V3.0_Back.png" width="400px" alt="Bitsy Expander M4 Back">
+</p>
 
 
-<img src="https://github.com/id-studiolab/BitsyExpander/blob/main/ItsyBitsy%20Expander%20v1.1/Assets/Preview_Top_ENIG.png" width="400px">   <img src="https://github.com/id-studiolab/BitsyExpander/blob/main/ItsyBitsy%20Expander%20v1.1/Assets/Preview_Back_ENIG.png" width="400px">
+### Features
 
+* 12 Grove Headers
+  - 5 Digital Headers with overlapping (shingled) pins: D2, D3, D4, D7, D13
+  - 1 Digital Header with exclusive pins: SERIAL1
+  - 3 Analog Headers with exclusive pins: A0, A2, A4
+  - 3 I²C Headers
+* ESP32-WROOM Co-Processor for WiFi and BLE
+* 1 JST SH 4-pin connector for Qwiic and STEMMA QT components (I²C)
+* 1 JST PH 2-pin connector for 3.7V LiPo Batteries (chargeable via ItsyBitsy's USB port)
+* 1 Logic-shifted output (allows driving components requiring 5V logic while powered via USB)
+
+> NOTE: In shingled pin headers, each header's second pin is shared with the first pin in the header above it. Therefore, using one disables the other. For instance, using pins D3 and D4 in the  D3-labeled header disallows the use of D4 in the D4-labeled header.
+
+### Pinout Diagrams
+
+Additional resources and pinout diagrams are available **[here](M4_info)**.
+
+## Bitsy Expander RP2040
+
+### Preview
+
+<p align="center">
+  <img src="assets/RP2040_V2.1_Front.png" width="400px" alt="Bitsy Expander RP2040 Front">
+  <img src="assets/RP2040_V2.1_Back.png" width="400px" alt="Bitsy Expander RP2040 Back">
+</p>
+
+### Features
+
+* 12 Grove Headers
+  - 5 Digital Headers with overlapping (shingled) pins: D2, D3, D4, D7, D13
+  - 1 Digital Header with exclusive pins: UART0
+  - 3 Analog Headers with exclusive pins: A0, A2, A3 (A2 and A3 contain digital pins for their second pins)
+  - 3 I²C Headers
+* ESP32-WROOM Co-Processor for WiFi and BLE
+* 1 JST SH 4-pin connector for Qwiic and STEMMA QT components (I²C)
+* 1 JST PH 2-pin connector for 3.7V LiPo Batteries (chargeable via ItsyBitsy's USB port)
+* 1 Logic-shifted output (allows driving components requiring 5V logic while powered via USB)
+
+> NOTE: In shingled pin headers, each header's second pin is shared with the first pin in the header above it. Therefore, using one disables the other. For instance, using pins D3 and D4 in the  D3-labeled header disallows the use of D4 in the D4-labeled header.
+
+### Pinout Diagrams
+
+Additional resources and pinout diagrams are available **[here](RP2040_info)**.
+
+## General Information
+
+### WiFi and BLE
+
+The Bitsy Expander uses an ESP32 WROOM module to provide WiFi functionality to the microcontroller using [Adafruit's fork](https://github.com/adafruit/nina-fw) of the Arduino NINA-W102 firmware. In CircuitPython, this library also allows for the use of Bluetooth Low Energy (BLE).
+
+To use the module with Circuitpython, use the [esp32spi](https://docs.circuitpython.org/projects/esp32spi/en/latest/) library. For Arduino, [Adafruit's forked WiFiNINA](https://github.com/adafruit/WiFiNINA/) library is required.
+
+The ESP32 module is connected as follows:
+
+| ESP32 Pin        | ItsyBitsy Pin |
+| ---------------- | ------------- |
+| Chip Select (CS) | D9            |
+| Busy (BSY)       | D11           |
+| Reset (RST)      | D12           |
+| SPI Clock (SCK)  | SCK           |
+| SPI MISO         | MISO          |
+| SPI MOSI         | MOSI          |
+
+### Solder Jumpers
+
+The underside of the Bitsy Expander features a number of solder jumpers:
+
+#### WIFI PIN:
+
+These pins are used to connect the ItsyBitsy board to the ESP32 module on the Expander. If WiFi functionality is not needed but additional digital pins are required, these jumpers can be used to disable the WiFi module and make additional pins available in the double-row header on the upper side of the board. The traces between the middle and left pads must be severed before soldering a jumper in place between the middle and the right pads to do so.
+
+#### ESP32 CONFIG:
+
+These solder jumpers are normally open. If the ESP32 module requires a firmware update, these jumpers may be used to enable the ItsyBitsy to serve as a programming interface for the ESP32 module. Refer to [Adafruit's excellent tutorial](https://learn.adafruit.com/upgrading-esp32-firmware) on flashing firmware onto the ESP32.
+
+#### BATTERY CHARGING:
+
+The default battery charging current is 100mA. A faster, 500mA charging mode is available for batteries that support it. It can be enabled by closing the solder jumper.
+
+## FAQ
+
+#### How do I recognize which Bitsy Expander I have?
+
+<p align="center">
+  <img src="assets/recognize_expander.jpg" width="400px" alt="Identify Expander Type">
+</p>
+
+The easiest way to identify which Bitsy Expander flavor you own is checking the label on the back of the board. **RP2040** or **M4** stated on the label indicates the flavor of your Expander. Older M4 Expanders have an **empty label** (and are also recognizable by the lack of an I²C header at the top). 
+
+#### How do I recognize which ItsyBitsy Development Board I am using?
+
+<p align="center" style="display: flex; justify-content: center;">
+  <img src="assets/recognize_IB_M4.jpg" width="250px" alt="Identify ItsyBitsy M4 Express" style="margin-right: 25px;">
+  <img src="assets/recognize_IB_RP2040.jpg" width="250px" alt="Identify ItsyBitsy RP2040" style="margin-left: 25px;">
+</p>
+
+The **ItsyBitsy M4 Express** features **one (RESET) button**. (So do most other ItsyBitsy Development boards, so always verify with the silkscreen.)
+The **ItsyBitsy RP2040** features **two (BOOT, RESET) buttons**.
+
+#### Will any ItsyBitsy-type microcontroller work with any Bitsy Expander?
+
+In principle, yes. The silkscreen on either flavor is specifically designed for either the [ItsyBitsy M4 Express](https://www.adafruit.com/product/3800) or the [ItsyBitsy RP2040](https://www.adafruit.com/product/4888), respectively. Pinouts differ only slightly between ItsyBitsy Development boards, however. The M4 Expander, for instance, has also been used successfully with the [ItsyBitsy M0 Express](https://www.adafruit.com/product/3727) in the past. This repository includes a number of pinout diagrams for different use-cases.
+
+## Version History
+
+| Version | Comment                                                      | Known Issues                                                 | Flavors            |
+| ------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------ |
+| **1.0** | Initial version                                              | Using pin D13 to drive the ESP Chip Select (CS) causes interference between the microcontroller's internal LED and the pull-up resistor | M4 Express         |
+| 1.1     | – Uses pin D9 instead of D13 to drive the ESP Chip Select to prevent interference  <br />– Adds a test point to the expander's underside for VBAT accessibility | Only two Grove headers provide direct access to Analog pins of used with RP2040 | M4 Express, RP2040 |
+| **2.0** | – Adds a top-edge JST SH 4-pin connector for Qwiic and STEMMA QT compatibility  <br />– Repositions pin A3 for better RP2040 analog pin access<br />– Adds "NC" (not connected) labels to double-row header pins that are not normally broken out | Tilde (~) marks inaccurately represent freely configurable PWM pins on RP2040. *Note: all pins support PWM, subject to certain limitations.* | RP2040             |
+| 2.1     | Silkscreen update to accurately depict a selection of freely configurable PWM pins on RP2040, preventing configuration conflicts among them |                                                              | RP2040             |
+| **3.0** | – Reinstates original pin layout (identical to V1) for sequential analog pin placement on M4 Express <br />– Maintains JST SH-4 connector and VBAT test point inherited from previous versions |                                                              | M4 Express         |
+
+This is the sibling of the [Nano Expander](https://github.com/id-studiolab/NanoExpander), a Grove expansion board for [Arduino Nano 33 IoT](https://store.arduino.cc/products/arduino-nano-33-iot).
 
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
