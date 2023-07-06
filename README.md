@@ -1,6 +1,7 @@
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
 # Bitsy Expander
+
 An expansion board adding support for the Grove solderless connector system, a WiFi radio, and LiPo battery charging circuitry to Adafruit ItsyBitsy Development Boards.
 
 Compatible with all ItsyBitsy boards, the Bitsy Expander is available in two distinct flavors. The silkscreens on each flavor are specifically tailored to either the [ItsyBitsy M4 Express](https://www.adafruit.com/product/3800) or the [ItsyBitsy RP2040](https://www.adafruit.com/product/4888).
@@ -23,6 +24,7 @@ Compatible with all ItsyBitsy boards, the Bitsy Expander is available in two dis
 </p>
 
 
+
 ### Features
 
 * 12 Grove Headers
@@ -39,7 +41,7 @@ Compatible with all ItsyBitsy boards, the Bitsy Expander is available in two dis
 
 ### Pinout Diagrams
 
-Additional resources and pinout diagrams are available **[here](M4_info)**.
+Additional resources and pinout diagrams are available **[here](M4_info.md)**.
 
 ## Bitsy Expander RP2040
 
@@ -49,6 +51,7 @@ Additional resources and pinout diagrams are available **[here](M4_info)**.
   <img src="assets/RP2040_V2.1_Front.png" width="400px" alt="Bitsy Expander RP2040 Front">
   <img src="assets/RP2040_V2.1_Back.png" width="400px" alt="Bitsy Expander RP2040 Back">
 </p>
+
 
 ### Features
 
@@ -66,7 +69,7 @@ Additional resources and pinout diagrams are available **[here](M4_info)**.
 
 ### Pinout Diagrams
 
-Additional resources and pinout diagrams are available **[here](RP2040_info)**.
+Additional resources and pinout diagrams are available **[here](RP2040_info.md)**.
 
 ## General Information
 
@@ -111,6 +114,7 @@ The default battery charging current is 100mA. A faster, 500mA charging mode is 
   <img src="assets/recognize_expander.jpg" width="400px" alt="Identify Expander Type">
 </p>
 
+
 The easiest way to identify which Bitsy Expander flavor you own is checking the label on the back of the board. **RP2040** or **M4** stated on the label indicates the flavor of your Expander. Older M4 Expanders have an **empty label** (and are also recognizable by the lack of an I²C header at the top). 
 
 #### How do I recognize which ItsyBitsy Development Board I am using?
@@ -119,6 +123,7 @@ The easiest way to identify which Bitsy Expander flavor you own is checking the 
   <img src="assets/recognize_IB_M4.jpg" width="250px" alt="Identify ItsyBitsy M4 Express" style="margin-right: 25px;">
   <img src="assets/recognize_IB_RP2040.jpg" width="250px" alt="Identify ItsyBitsy RP2040" style="margin-left: 25px;">
 </p>
+
 
 The **ItsyBitsy M4 Express** features **one (RESET) button**. (So do most other ItsyBitsy Development boards, so always verify with the silkscreen.)
 The **ItsyBitsy RP2040** features **two (BOOT, RESET) buttons**.

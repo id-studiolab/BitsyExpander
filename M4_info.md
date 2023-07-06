@@ -1,5 +1,5 @@
 # Bitsy Expander M4 Pinout Diagrams
-The ItsyBitsy M4 Express is a powerful and versatile development board powered by a 32-bit Cortex M4 core microcontroller running at 120 MHz. It features two 12-bit DACs, seven 12-bit ADCs, and plenty PWM-capable outputs. 
+The ItsyBitsy M4 Express is a powerful and versatile development board powered by a 32-bit Cortex M4 microcontroller running at 120 MHz. It features two 12-bit DACs, seven 12-bit ADCs, and plenty PWM-capable outputs. 
 
 This page provides an overview of the pins made available via the Grove headers on the Bitsy Expander M4.
 
